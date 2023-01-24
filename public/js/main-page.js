@@ -237,7 +237,7 @@ function drawTable() {
       tmp_points[i] = parseInt(t_points[i]);
       tmp_angle[i] = parseFloat(t_angle[i]);
       tmp_speed[i] = parseFloat(t_speed[i]);
-      if (t_isInBasket[i] === "false") {
+      if (t_isInBasket[i] === false) {
         tmp_isInBasket[i] = false;
       } else {
         tmp_isInBasket[i] = true;
