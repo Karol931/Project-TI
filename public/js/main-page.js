@@ -190,7 +190,7 @@ function previousShots(points, isInBasket, angle, speed) {
       tmp_points[i] = parseInt(t_points[i]);
       tmp_angle[i] = parseFloat(t_angle[i]);
       tmp_speed[i] = parseFloat(t_speed[i]);
-      if (t_isInBasket[i] === "false") {
+      if (t_isInBasket[i] === false) {
         tmp_isInBasket[i] = false;
       } else {
         tmp_isInBasket[i] = true;
@@ -250,7 +250,7 @@ function drawTable() {
     text += "<th>Prędkość rzutu [m/s]</th></tr>";
     for (let i = 0; i < tmp_speed.length; i++) {
       text += "<tr><td>" + tmp_points[i] + "</td>";
-      if (tmp_isInBasket) {
+      if (tmp_isInBasket === true) {
         text += "<td>Tak</td>";
       } else {
         text += "<td>Nie</td>";
@@ -286,7 +286,7 @@ function updateData() {
       tmp_points[i] = parseInt(t_points[i]);
       tmp_angle[i] = parseFloat(t_angle[i]);
       tmp_speed[i] = parseFloat(t_speed[i]);
-      if (t_isInBasket[i] === "false") {
+      if (t_isInBasket[i] === false) {
         tmp_isInBasket[i] = false;
       } else {
         tmp_isInBasket[i] = true;
