@@ -250,7 +250,7 @@ function drawTable() {
     text += "<th>Prędkość rzutu [m/s]</th></tr>";
     for (let i = 0; i < tmp_speed.length; i++) {
       text += "<tr><td>" + tmp_points[i] + "</td>";
-      if (tmp_isInBasket === true) {
+      if (tmp_isInBasket[i] === true) {
         text += "<td>Tak</td>";
       } else {
         text += "<td>Nie</td>";
