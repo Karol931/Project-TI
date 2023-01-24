@@ -10,7 +10,10 @@ mongoose.connect(
   function (err, client) {
     module.exports = client;
     const app = require("./server.js");
-    app.listen(process.env.PORT || 20727, "0.0.0.0");
+    app.listen(
+      process.env.PORT || 20727,
+      `0.0.0.0:${process.env.PORT || 20727}`
+    );
   }
 );
 
