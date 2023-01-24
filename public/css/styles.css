@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: rgb(255, 199, 94);
+    height: 5000px;
+    min-width: 500px;
+}
+
+.header {
+    background-color: orange;
+    padding: 40px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    border: black 5px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: orange;
+    padding: 5px;
+}
+
+nav {
+    padding-top: 20px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+}
+
+.navigation {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+p,
+li {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 5px;
+}
+
+p.last {
+    padding-bottom: 20px;
+}
+
+.first-row,
+.second-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.param {
+    padding-left: 40px;
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+select {
+    width: 200px;
+    font-size: 20px;
+    border-radius: 6px;
+    border: black solid 2px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 300px;
+    background-color: grey;
+    border-radius: 15px;
+    outline: none;
+    height: 10px;
+    cursor: pointer;
+    color: grey;
+    border: black solid 2px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: orange;
+    border: black solid 1px;
+    border-radius: 7px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#draw,
+#calculations,
+.buttons,
+#save,
+#results,
+#update {
+    border: black 2px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: orange;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#save-holder {
+    text-align: center;
+    display: none;
+}
+
+#consts,
+#equations {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    padding: 0;
+    background-color: grey;
+}
+
+thead {
+    background-color: antiquewhite;
+    border: solid black 2px;
+}
+
+th {
+    padding: 5px;
+}
+
+td {
+    background-color: lightgrey;
+    padding: 5px;
+}
+
+#canvas {
+    border: solid black 3px;
+    margin-left: 40px;
+}
+
+#points {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.result,
+#error,
+#log {
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+
+#login,
+#register {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.login-input {
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#wyniki {
+    display: none;
+}

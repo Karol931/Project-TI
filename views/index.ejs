@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koszykówka</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body onload="drawTable()">
+    <header class="header">
+        <h1>Koszykówka</h1>
+        <figure>
+            <img src="/images/pilka.png" alt="Pilka" width="160" height="160" class="center">
+        </figure>
+    </header>
+    <br>
+    <div id="log">
+        <%= text %>
+    </div>
+    <br />
+    <nav>
+        <div class="navigation">
+            <a href="#history">Dawne czasy</a>
+            <a href="#players">Najpopularniejsi zawodnicy</a>
+            <a href="#rules">Zasady gry</a>
+        </div>
+        <div class="navigation">
+            <a href="#game">Zagraj w gre</a>
+            <a href="/login">
+                <%= buttonText %>
+            </a>
+        </div>
+    </nav>
+    <br />
+    <div id="history">
+        <header>
+            <h2>Historia</h2>
+        </header>
+        <br />
+        <article>
+            <p>Za datę powstania koszykówki przyjmuje się 21 grudnia 1891 roku, a za jej twórcę Jamesa
+                Naismitha.
+            </p>
+            <p>
+                Koszykówka powstała w grudniu 1891 roku w Springfield w stanie Massachusetts gdy
+                protestancki pastor i nauczyciel wychowania fizycznego (pochodzenia kanadyjskiego) w YMCA
+                przedstawił zasady nowej gry zespołowej.
+            </p>
+            <p>
+                W 1891 roku Rada Pedagogiczna w Springfield YMCA
+                Sport College rozpisała konkurs na dyscyplinę sportu potrzebną do zachowania kondycji dzieci
+                i młodzieży w czasie semestru zimowego.
+            </p>
+            <p class="last">
+                Naismith chciał stworzyć grę, która minimalizowałaby
+                kontakt fizyczny, ale zawierała dużo skakania, biegania oraz koordynacji wzrokowo-ruchowej
+                związanej z posiadaniem piłki w dłoniach.
+            </p>
+        </article>
+    </div>
+    <div id="players">
+        <header>
+            <h2>Najlepsi zawodnicy</h2>
+        </header>
+        <br />
+        <article>
+            <div class="first-row">
+                <div>
+                    <h3>Rudy Gobert</h3>
+                    <img src="/images/RudyGobert.png" alt="Rudy Gobert" width="140" height="180">
+                </div>
+                <div>
+                    <h3>Stephen Curry</h3>
+                    <img src="/images/StephenCurry.png" alt="Stephen Curry" width="140" height="180">
+                </div>
+            </div>
+            <div class="second-row">
+                <div>
+                    <h3>James Harden</h3>
+                    <img src="/images/JamesHarden.png" alt="James Harden" width="140" height="180">
+                </div>
+                <div>
+                    <h3>Luka Doncić</h3>
+                    <img src="/images/LukaDoncic.png" alt="Luka Doncić" width="140" height="180">
+                </div>
+            </div>
+        </article>
+    </div>
+    <div id="rules">
+        <header>
+            <h2>Zasady gry</h2>
+        </header>
+        <article>
+            <p>W koszykówkę grają dwie drużyny, po pięciu zawodników każda.
+            </p>
+            <p> Celem każdej z drużyn jest zdobywanie
+                punktów za celne
+                rzuty do kosza przeciwnika i zapobieganie zdobywaniu punktów przez drużynę przeciwną.
+            </p>
+            <p>
+                Nad właściwym
+                przebiegiem gry
+                czuwają sędziowie, sędziowie stolikowi i komisarz. Zwycięzcą meczu zostaje drużyna, która na koniec
+                czasu gry uzyska
+                większą liczbę punktów.
+            </p>
+            <p>
+                Kosze umieszczone są na wysokości 3,05 metra. Punkty otrzymuje się za umieszczenie piłki w koszu:</p>
+            <ul>
+                <li>1 punkt za celny rzut wolny z linii rzutów wolnych</li>
+                <li>2 punkty za celny rzut z akcji wykonany z odległości mniejszej niż linia rzutów za trzy punkty</li>
+                <li>3 punkty za celny rzut zza linii rzutów za trzy punkty (6,75 m, w NBA 7,24 m)</li>
+            </ul>
+            <p class="last">
+                Boisko do gry to płaska, twarda powierzchnia wolna od przeszkód, o wymiarach 28 m długości i 15 m
+                szerokości, mierzonych
+                od wewnętrznych krawędzi linii ograniczających boisko. Linia musi mieć 5 cm szerokości.
+            </p>
+            <figure>
+                <h3>Schemat boiska</h3>
+                <img src="/images/boisko.png" alt="boisko do koszykowki" class="center" width="400">
+            </figure>
+            <figure>
+                <h3>Film z meczu</h3>
+                <video width="400" class="center" controls>
+                    <source src="/video/mecz.mp4" type="video/mp4">
+                </video>
+            </figure>
+        </article>
+    </div>
+    <br />
+    <div id="game">
+        <header>
+            <h2>Rzut do kosza</h2>
+        </header>
+        <p>
+            Poniżej przedswationa jest uproszczona trajektoria rzutu do kosza. Można ustawić prędkość rzutu oraz kąt pod
+            którym rzucamy piłkę.
+        </p>
+        <p>
+            Zakładamy, że piłka jest punktem materialnym, więc działa na niego tylko siła grawitacji (przyciągania).
+            Analizowane zjawisko to rzut ukośny.
+            Podaną prędkość rozkładamy na prędkość pionową i poziomą, a następnie wraz z krokiem czasowym obliczamy
+            kolejne współrzędne położenia x i y, biorąc
+            pod uwagę przyspieszenie ziemskie g = 9.81 m/s<sup>2</sup>. W obliczeniach przyjmujemy początkową wartość y.
+        </p>
+        </a></p>
+        <h4>Zagrajmy w grę!</h4>
+        <p>Żeby wygrać musisz rzucić w czerwony kosz. Wybierz wartości: odległość, kąt, prędkość i możesz zacząć
+            klikając w przycisk 'Graj!'.</p>
+        <p>Jeśli chcesz zobaczyć obliczenia odpowiedzialne za rzut przyciśnij 'Obliczenia'.</p>
+        <br />
+        <form action="/" method="post">
+            <div id="parameters">
+                <h4>Wybierz parametry rzutu:</h4>
+                <br />
+                <div id="distances">
+                    <p class="param">Punkty za rzut:</p>
+                    <select name="distance" id="distance">
+                        <option value="6.75">Rzut za 3 punkty</option>
+                        <option value="5">Rzut za 2 punkty</option>
+                        <option value="3.95">Rzut za 1 punkty</option>
+                    </select>
+                </div>
+                <br />
+                <div id="angles">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15&ordm;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80&ordm;
+                    </p>
+                    <p class="param">
+                        Kąt:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+                    <input name="angle" type="range" min="15" max="80" value="25" id="angle" class="slider">
+
+                </div>
+                <br />
+                <div id="speeds">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8
+                        m/s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28
+                        m/s
+                    </p>
+                    <p class="param">
+                        Predkosc:
+                    </p>
+                    <input name="speed" type="range" min="30" max="100" value="25" id="speed" class="slider">
+
+                </div>
+                <br />
+                <div id="buttons">
+                    <input type="button" id="draw" value="Graj" onclick="drawCanvas()">
+                    <% if(isLoggedIn) { %>
+                        <a href="/results" id="results">Wyniki</a>
+                        <%} %>
+                </div>
+            </div>
+            <br>
+            <div id="game-on" name="game"></div>
+            <div id="after-game">
+            </div>
+        </form>
+        <br />
+        <div id="results-table">
+        </div>
+        <% if(isLoggedIn) { %>
+            <div style="text-align: center;" id="update-div">
+            </div>
+            <%} %>
+    </div>
+    <script src="/js/main-page.js"></script>
+</body>
+
+</html>

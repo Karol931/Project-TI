@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Koszykówka</h1>
+        <figure>
+            <img src="/images/pilka.png" alt="Pilka" width="160" height="160" class="center">
+        </figure>
+    </header>
+    <div id="login">
+        <form action="/login" class="form" method="post">
+            <h3>Zaloguj się</h3>
+            <label for="fname">Imie:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="fname" placeholder="Imie" class="login-input">
+            <label for="lname">Nazwisko:&nbsp;&nbsp;</label>
+            <input type="text" name="lname" placeholder="Nazwisko" class="login-input">
+            <br>
+            <input type="submit" value="Zaloguj się" class="buttons">
+        </form>
+    </div>
+    <br>
+    <div id="blad">
+        <%= text %>
+    </div>
+    <br>
+    <br>
+    <div style="text-align:center">
+        <a href="/register">Zarejestruj się</a>
+        <a href="/">Powrót do strony głownej</a>
+    </div>
+</body>
+
+</html>
