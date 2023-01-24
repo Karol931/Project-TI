@@ -2,6 +2,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const mongoose = require("mongoose");
 const db = mongoose.connection;
+const port = process.env.PORT || 20727;
 
 mongoose.set("strictQuery", false);
 mongoose.connect(
@@ -10,10 +11,7 @@ mongoose.connect(
   function (err, client) {
     module.exports = client;
     const app = require("./server.js");
-    app.listen(
-      process.env.PORT || 20727,
-      `0.0.0.0:${process.env.PORT || 20727}`
-    );
+    app.listen(port);
   }
 );
 
